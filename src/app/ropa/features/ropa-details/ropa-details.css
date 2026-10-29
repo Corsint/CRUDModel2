@@ -1,0 +1,33 @@
+.detail{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 60%;
+    padding: 2rem;
+    justify-content: center;
+    text-align: center;
+}
+
+.detail-button{
+    display: flex;
+    gap: 2rem;
+}
+
+article{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    border: 2px blueviolet solid;
+    gap: 1rem;
+    border-radius: 12px;
+    padding: 1rem;
+    align-items: center ;
+    margin: 0 auto;
+    min-width: 30rem;
+}
+h2,p{
+    margin: 0;
+}
+button{
+    margin-top: auto;
+}

@@ -1,0 +1,21 @@
+:host {
+  display: flex;
+}
+article{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    border: 2px blueviolet solid;
+    gap: 1rem;
+    border-radius: 12px;
+    padding: 1rem;
+    align-items: center ;
+    margin: 0 auto;
+}
+h2,p{
+    margin: 0;
+}
+button{
+    margin-top: auto;
+    width: 30%;
+}

@@ -1,0 +1,53 @@
+{
+  "ropa": [
+    {
+      "id": "1",
+      "modelo": "Remera Oversize Básica",
+      "descripcion": "Remera de algodón peinado 100%, corte holgado, ideal para uso diario.",
+      "precio": 100000,
+      "categoria": "Remera",
+      "enOferta": false
+    },
+    {
+      "id": "2",
+      "modelo": "Jean Mom Tiro Alto",
+      "descripcion": "Jean de denim rígido con lavado clásico y cintura alta.",
+      "precio": 52000,
+      "categoria": "Pantalon",
+      "enOferta": true
+    },
+    {
+      "id": "CAM-003",
+      "modelo": "Campera Rompeviento",
+      "descripcion": "Campera liviana impermeable con capucha y bolsillos con cierre.",
+      "precio": 78900,
+      "categoria": "Campera",
+      "enOferta": false
+    },
+    {
+      "id": "BUZ-004",
+      "modelo": "Buzo Canguro con Capucha",
+      "descripcion": "Buzo de friza con interior suave, bolsillo canguro y cordón ajustable.",
+      "precio": 41500,
+      "categoria": "Buzo",
+      "enOferta": true
+    },
+    {
+      "id": "5",
+      "modelo": "Zapatillas Urbanas Blancas",
+      "descripcion": "Zapatillas de cuero sintético con suela de goma, estilo minimalista.",
+      "precio": 67000,
+      "categoria": "Calzado",
+      "enOferta": false
+    },
+    {
+      "modelo": "Remera re loca",
+      "descripcion": "alta remera",
+      "precio": 10000,
+      "categoria": "Remera",
+      "enOferta": false,
+      "id": "J2j3c9OzRDQ"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

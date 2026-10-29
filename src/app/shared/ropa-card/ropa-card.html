@@ -1,0 +1,12 @@
+@let r =ropa()!;
+
+<article>
+    <h2>{{r.modelo}}</h2>
+    <small>{{r.categoria}}</small>
+    <p>${{r.precio}}</p>
+    @if (r.enOferta) {
+        <p>En promocion</p>
+    }
+
+    <button (click)="goToDetails(r.id)">Ir a detalles</button>
+</article>

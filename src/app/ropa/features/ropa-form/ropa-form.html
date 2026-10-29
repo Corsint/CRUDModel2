@@ -1,0 +1,69 @@
+<form [formGroup]="ropaForm" (ngSubmit)="submitRopa()">
+  <div class="field">
+    <div class="text">
+      <label>
+        Modelo
+      </label>
+      @if (this.ropaForm.controls.modelo.invalid && this.ropaForm.controls.modelo.touched) {
+          <small>El modelo no puede estar vacio</small>
+        }
+    </div>
+    <input formControlName="modelo" />
+  </div>
+  <div class="field">
+    <div class="text">
+      <label>
+        Categoria
+      </label>
+      @if (this.ropaForm.controls.categoria.invalid && this.ropaForm.controls.categoria.touched) {
+          <small>La categoria no puede estar vacia</small>
+        }
+    </div>
+    <select formControlName="categoria">
+      <option value="Remera">Remera</option>
+      <option value="Pantalon">Pantalon</option>
+      <option value="Campera">Campera</option>
+      <option value="Buzo">Buzo</option>
+      <option value="Calzado">Calzado</option>
+    </select>
+  </div>
+  <div class="field">
+    <div class="text">
+      <label>
+        Descripcion
+      </label>
+       @if (
+          this.ropaForm.controls.descripcion.invalid && this.ropaForm.controls.descripcion.touched
+        ) {
+          <small>La descripcion no puede estar vacia</small>
+        }
+    </div>
+    <input formControlName="descripcion" />
+  </div>
+  <div class="field">
+    <div class="text">
+      <label>
+        Precio
+      </label>
+      @if (this.ropaForm.controls.precio.invalid && this.ropaForm.controls.precio.touched) {
+          <small>El precio no puede estar vacio</small>
+        }
+    </div>
+    <input formControlName="precio" type="number" />
+  </div>
+  <div class="field">
+    <label>
+        En promocion
+        <input type="checkbox" formControlName="enOferta" />
+    </label>
+  </div>
+
+  <div class="form-buttons">
+      <button type="submit">{{ ropaAEditar() ? 'Guardar cambios' : 'Agregar ' }}</button>
+      @if (ropaAEditar()) {
+        <button (click)="this.cancelar.emit()">Cancelar</button>
+      }@else {
+        <button type="button" routerLink="/ropa">Volver</button>
+      }
+  </div>
+</form>

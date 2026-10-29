@@ -1,0 +1,27 @@
+@let r = ropa()!;
+
+<div class="detail">
+  <article>
+    <h2>{{ r.modelo }}</h2>
+    <small>{{ r.categoria }}</small>
+    <p>{{ r.descripcion }}</p>
+    <p>${{ r.precio }}</p>
+    @if (r.enOferta) {
+      <p>En promocion</p>
+    }
+
+    <div class="detail-button">
+      @if (!editando()) {
+        <button (click)="this.editando.set(true)">Editar</button>
+      }
+      <button (click)="deleteRopa(r.id)">Eliminar</button>
+    </div>
+  </article>
+  @if (editando()) {
+      <app-ropa-form
+        [ropaAEditar]="r"
+        (ropaEditada)="onUpdate($event)"
+        (cancelar)="this.editando.set(false)"
+      ></app-ropa-form>
+    }
+</div>
