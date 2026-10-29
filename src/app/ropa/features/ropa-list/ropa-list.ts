@@ -29,4 +29,10 @@ export class RopaList implements OnInit {
     category ? this.ropa().filter((r)=>r.categoria === category ): this.ropa()
     )
   }
+
+  filterOnSale(onSale:boolean){
+    this.filteredRopa.set(
+    onSale? this.ropa().filter((r)=>r.enOferta === onSale ): this.ropa()
+    )
+  }
 }

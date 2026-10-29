@@ -1,15 +1,25 @@
-<div class="main">
-    <select #sel (change)="filterByCategory(sel.value)">
-        <option value=""></option>
-        <option value="Remera">Remera</option>
-        <option value="Pantalon">Pantalon</option>
-        <option value="Campera">Campera</option>
-        <option value="Buzo">Buzo</option>
-        <option value="Calzado">Calzado</option>
-    </select>
-    @for (r of filteredRopa(); track r.id) {
+<div class="content">
+    <div class="filters">
+        <label>
+            Filtrar por categoria
+            <select #sel (change)="filterByCategory(sel.value)">
+                <option value=""></option>
+                <option value="Remera">Remera</option>
+                <option value="Pantalon">Pantalon</option>
+                <option value="Campera">Campera</option>
+                <option value="Buzo">Buzo</option>
+                <option value="Calzado">Calzado</option>
+            </select>
+        </label>
+        <label>
+            En promocion
+            <input type="checkbox" #sale (change)="filterOnSale(sale.checked)">
+        </label>
+    </div>
 
-    <app-ropa-card [ropa]="r"></app-ropa-card>
-
-    }
+    <div class="main">
+        @for (r of filteredRopa(); track r.id) {
+        <app-ropa-card [ropa]="r"></app-ropa-card>
+        }
+    </div>
 </div>
