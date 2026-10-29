@@ -1,9 +1,15 @@
 <div class="main">
-    @for (r of ropa(); track r.id) {
-        
-            <app-ropa-card
-            [ropa]="r"
-            ></app-ropa-card>
-        
+    <select #sel (change)="filterByCategory(sel.value)">
+        <option value=""></option>
+        <option value="Remera">Remera</option>
+        <option value="Pantalon">Pantalon</option>
+        <option value="Campera">Campera</option>
+        <option value="Buzo">Buzo</option>
+        <option value="Calzado">Calzado</option>
+    </select>
+    @for (r of filteredRopa(); track r.id) {
+
+    <app-ropa-card [ropa]="r"></app-ropa-card>
+
     }
 </div>

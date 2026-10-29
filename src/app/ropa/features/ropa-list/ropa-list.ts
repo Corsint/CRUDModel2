@@ -13,12 +13,20 @@ export class RopaList implements OnInit {
   ropaService = inject(RopaService)
 
   ropa = signal<Ropa[]>([])
+  filteredRopa = signal<Ropa[]>([])
 
   ngOnInit() {
     this.ropaService.getAll().subscribe({
       next: (ropa) => {
         this.ropa.set(ropa)
+        this.filteredRopa.set(ropa)
       }
     })
+  }
+
+  filterByCategory(category:string){
+    this.filteredRopa.set(
+    category ? this.ropa().filter((r)=>r.categoria === category ): this.ropa()
+    )
   }
 }

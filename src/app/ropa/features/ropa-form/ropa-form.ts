@@ -34,8 +34,9 @@ export class RopaForm implements OnInit {
   }
 
   submitRopa() {
+
     if (this.ropaForm.invalid) {
-      this.ropaForm.markAllAsTouched
+      this.ropaForm.markAllAsTouched()
       return
     }
 
